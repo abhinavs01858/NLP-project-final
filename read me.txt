@@ -1,0 +1,26 @@
+1. Give the packages path name....Extract the .gz file from model.jar file
+Example:jar path-stanford_modelpath='/Users/somrup/Documents/Algo 1/nlp/stanford-corenlp-full-2015-12-09/stanford-parser-full-2015-12-09/stanford-parser-full-2015-12-09'
+eng_modelpath='/Users/somrup/Documents/Algo 1/nlp/models/edu/stanford/nlp/models/lexparser/englishRNN.ser.gz' -- parser packages
+2. In jar give the path for jar file present in the postagger package
+   In model package give the model path present inside the model package
+jar='/Users/somrup/Documents/Algo 1/nlp/stanford-postagger-full-2015-12-09/stanford-postagger-full-2015-12-09/stanford-postagger.jar'
+model='/Users/somrup/Documents/Algo 1/nlp/stanford-postagger-full-2015-12-09/stanford-postagger-full-2015-12-09/models/english-left3words-distsim.tagger'
+tagger = StanfordPOSTagger(model, jar)
+3.After giving the given package paths correctly keep the csv file to be read in the working directory
+4.Also keep strong words.txt weak words.txt and stop words.txt paths in the following code
+
+file_strong_adj='/Users/somrup/Documents/Algo 1/nlp/avinava/strong.txt'
+file_stop_words='/Users/somrup/Documents/Algo 1/nlp/avinava/stopwords.txt'
+file_weak_adj='/Users/somrup/Documents/Algo 1/nlp/avinava/weak.txt'
+
+5.In line 78 of the code give the distrim model for POS tagging instead of the previous model.Its present in the models folder of POS tagging
+6.Run the code
+
+
+
+#ML
+7.You get .txt files of all the features from running the code above. Make the .txt file to .csv and divide it into training.csv and testing.csv to see accuracy
+8.Run the first.R file whih essentially is logistic regression prediction 
+
+
+PS : The data is divided into two parts, data_small.csv and NLP Technology.csv, the third column can be deleted
